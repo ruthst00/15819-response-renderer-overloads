@@ -2,7 +2,7 @@
 
 ### Start the app
 ``` bash
-/gradlew bootRun --offline --console=plain
+./gradlew bootRun --offline --console=plain
 ```
 
 ### Hit the controller action
@@ -23,6 +23,13 @@ $ curl -H 'X-Requested-With: XMLHttpRequest' http://localhost:8080/search/result
 ### Results
 No exception thrown by application either via browser console or stdout/stderr.
 
+If you remove the __results.gsp layout you get:
+
+``` bash
+Error 500: Internal Server Error
+...
+Caused by ControllerExecutionException: Unable to load template for uri [/search/__results]. Template not found.
+```
 
 ## Grails 8.0.0 Documentation
 
