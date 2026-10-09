@@ -1,4 +1,4 @@
-## Attempt to reproduce =issue []():
+## Attempt to reproduce issue [#15819](https://github.com/apache/grails-core/issues/15819):
 
 ### Start the app
 ``` bash
