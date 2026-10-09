@@ -20,6 +20,10 @@ $ curl -H 'X-Requested-With: XMLHttpRequest' http://localhost:8080/search/result
         <li>Spring Boot</li>
 ```
 
+### Results
+No exception thrown by application either via browser console or stdout/stderr.
+
+
 ## Grails 8.0.0 Documentation
 
 - [User Guide](https://grails.apache.org/docs/8.0.0/guide/index.html)
