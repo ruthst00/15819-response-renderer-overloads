@@ -6,30 +6,15 @@
 ```
 
 ### Hit the controller action
-open `http://localhost:8080/search/results` in your default browser, and check the response and server logs for exceptions.
-
-Check the browser page for errors:
-![Alt text](./grails-app/assets/images/browser.png)
-
-...or via curl:
-``` bash
-$ curl -H 'X-Requested-With: XMLHttpRequest' http://localhost:8080/search/results
-<ul id="results">    
-        <li>Grails</li>    
-        <li>Groovy</li>    
-        <li>Spring Boot</li>
+Open `http://localhost:8080/search/results` in your default browser, and check the server logs for exceptions:
+```bash
+jakarta.servlet.ServletException: Could not resolve view with name 'results' in servlet with name 'dispatcherServletRegistration'
+        at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1280) ~[spring-webmvc-7.0.9.jar:7.0.9]
+        at org.grails.web.servlet.mvc.GrailsDispatcherServlet.render(GrailsDispatcherServlet.groovy:139) ~[grails-web-mvc-8.0.0.jar:8.0.0]
+        at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1042) ~[spring-webmvc-7.0.9.jar:7.0.9]
+        ...
 ```
 
-### Results
-No exception thrown by application either via browser console or stdout/stderr.
-
-If you remove the __results.gsp layout you get:
-
-``` bash
-Error 500: Internal Server Error
-...
-Caused by ControllerExecutionException: Unable to load template for uri [/search/__results]. Template not found.
-```
 
 ## Grails 8.0.0 Documentation
 
